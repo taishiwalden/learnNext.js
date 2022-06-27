@@ -3,7 +3,51 @@
 
 <body>
     <div id="app"></div>
-    <script type="text/javascript"></script>
+    <!--import React-->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!--Babel script-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!--changing the script type to type=text/jsx-->
+    <script type="text/jsx">
+        const app = document.getElementById('app');
+
+        function Header() {
+            return <h1>Develop. Preview. Ship. 🚀</h1>;
+        }
+
+        function HomePage() {
+            return (
+                <div>
+                    {/* Nesting the Header component */}
+                    <Header />
+                </div>;
+            );
+        }
+
+        ReactDOM.render(<Header />, app);
+    </script>
+
+    <!--THE JAVASCRIPT NEEDED-->
+    <!-- <script type="text/javascript">
+        // Select the div element with the 'app' id
+        const app = document.getElementById('app');
+
+        // Create a new H1 element
+        const header = document.createElement("h1");
+
+        // Create a new text node for the H1 Element
+        const headerContent = document.createTextNode(
+            'Develop. Preview. Ship. 🚀',
+        );
+
+        // Append the text to the H1 Element
+        header.appendChild(headerContent);
+
+        // Place the H1 Element inside the div
+        app.appendChild(header);
+    </script> -->
 </body>
 
 </html>
